@@ -3,13 +3,13 @@
 # of 59 characters per line with 1 text format on each character.
 max-character-limit: 1000
 
-# Setting ban-violators to true, will automatically ban players who try to create
-# signs that exceed the max-character-limit.
-ban-violators: true;
+# Setting ban-violators to true, will automatically ban players who
+# try to create signs, or pages in books, that exceed the max-character-limit.
+ban-violators: true
 
 # When set to true, signs that exceed the character limit will be removed during
 # the chunk loading process.
-remove-bad-signs: true;
+remove-bad-signs: true
 
 # Set to true to check updates made to writable books.
-check-book-updates: true;
+check-book-updates: true
