@@ -1,6 +1,6 @@
-# max-character-limit is the maximum number of characters to allow on a sign.
-# The default is 196. This accounts for a maximum of 44 visible characters
-# per line, with 16 characters for formatting and 4 new line characters.
+# The maximum number of characters to allow on a sign or in a book.
+# The default is 1000. Which accounts for the possibility of a max
+# of 59 characters per line with 1 text format on each character.
 max-character-limit: 1000
 
 # Setting ban-violators to true, will automatically ban players who try to create
