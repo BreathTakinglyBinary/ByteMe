@@ -1,0 +1,7 @@
+name: ByteMe
+main: BreathTakinglyBinary\ByteMe\ByteMe
+version: 1.0.0
+api: 3.0.0
+load: STARTUP
+author: FiberglassCivic
+description: Checks for and handles problems with signs that exceed the character limit.

@@ -1,0 +1,1 @@
+A server protection plugin that checks player text input on signs and books.
