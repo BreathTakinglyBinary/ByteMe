@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/BreathTakinglyBinary/ByteMe
+branches:
+- master
+projects:
+  ByteMe:
+    path: /
+    icon: icon.png
+...
