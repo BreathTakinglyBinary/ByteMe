@@ -7,8 +7,7 @@ max-character-limit: 1000
 # try to create signs, or pages in books, that exceed the max-character-limit.
 ban-violators: true
 
-# When set to true, signs that exceed the character limit will be removed during
-# the chunk loading process.
+# When set to true, signs that exceed the character limit will be removed.
 remove-bad-signs: true
 
 # Set to true to check updates made to writable books.
