@@ -31,7 +31,7 @@ class ByteMe extends PluginBase implements Listener{
     private $removeSigns = true;
 
     public function onEnable() : void{
-        $this->banViolators = (bool) $this->getConfig()->get("ban-violators", true);
+        $this->banViolators = $this->getConfig()->get("ban-violators", true);
         $this->maxCharacterLimit = $this->getConfig()->get("max-character-limit", 1000);
         $this->removeSigns = $this->getConfig()->get("remove-bad-signs", true);
         $this->checkBookUpdates = $this->getConfig()->get("check-book-updates", true);
@@ -73,9 +73,11 @@ class ByteMe extends PluginBase implements Listener{
             $text .= (string) $line;
         }
         if($this->isTextInvalid($text)){
-            $this->getLogger()->info(TextFormat::BOLD . TextFormat::LIGHT_PURPLE . "Banning " . $event->getPlayer()->getName() . " for creating a bad sign.");
-            $this->getLogger()->info("Sign text was: $text");
-            $event->getPlayer()->setBanned(true);
+            if($this->banViolators){
+                $this->getLogger()->info(TextFormat::BOLD . TextFormat::LIGHT_PURPLE . "Banning " . $event->getPlayer()->getName() . " for creating a bad sign.");
+                $this->getLogger()->info("Sign text was: $text");
+                $event->getPlayer()->setBanned(true);
+            }
             $event->setCancelled();
             if($this->removeSigns){
                 $this->removeSign($event->getBlock()->getLevel(), $event->getBlock());
